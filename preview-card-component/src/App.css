@@ -76,12 +76,11 @@ body {
   color: var(--dark-greyish-blue);
 }
 
-.right-content .price {
+.price {
   font-size: 2rem;
   color: var(--dark-cyan);
   display: flex;
   gap: 1rem;
-  font-family: 'Fraunces';
   align-items: center;
 }
 
@@ -93,7 +92,7 @@ body {
 
 .btn {
   width: 100%;
-  height: 2rem;
+  height: 2.25rem;
   border: 0;
   background-color: var(--dark-cyan);
   color: white;
