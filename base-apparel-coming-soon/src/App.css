@@ -1,42 +1,119 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans';
+  font-size: 16px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+:root {
+  /* 
+    COLORS 
+  */
+  --desatured-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  --dark-greyish-red: hsl(0, 6%, 24%);
+
+  /* GRADIENTS */
+  --soft-linear: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --btn-linear: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.background {
+  position: absolute;
+  z-index: -1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.main {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  height: 100vh;
+  background-image: var(--soft-linear);
 }
 
-.card {
-  padding: 2em;
+.left_section {
+  display: grid;
+  place-items: center;
 }
 
-.read-the-docs {
-  color: #888;
+.left_section--content {
+  display: grid;
+  grid-template-rows: 150px;
+  width: 60%;
+}
+
+.left_section--content-hero {
+  display: grid;
+  grid-template-rows: 160px 100px;
+}
+
+.branding {
+  display: flex;
+  align-items: flex-start;
+}
+
+.hero_text {
+  color: var(--dark-greyish-red);
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+}
+
+.highlighted {
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--desatured-red);
+}
+
+.hero_desc {
+  color: var(--desatured-red);
+  font-size: 1.25rem;
+}
+
+.email_container {
+  background-color: white;
+  border-radius: 30px;
+  width: 400px;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid var(--desatured-red);
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.email {
+  width: 100%;
+  outline: none;
+  border: none;
+  color: var(--dark-greyish-red);
+  padding-left: 20px;
+}
+
+*:focus {
+  outline: none;
+}
+
+.btn {
+  outline: none;
+  width: 90px;
+  height: 45px;
+  border-radius: 30px;
+  border: 1px solid var(--desatured-red);
+  background: var(--btn-linear);
+  color: white;
+  right: 0;
+  cursor: pointer;
+}
+
+.email_message {
+  padding-left: 20px;
+  color: var(--soft-red);
+}
+
+.banner {
+  background-size: cover;
+  max-height: 100vh;
 }
