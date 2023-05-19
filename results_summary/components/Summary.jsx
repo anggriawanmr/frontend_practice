@@ -6,8 +6,11 @@ const Summary = () => {
   return (
     <div className="p-8 grid-flow text-center">
       <h2 className="font-extrabold text-lg">Summary</h2>
-      {summaries.map((summary) => (
-        <div className="flex justify-between items-center p-4 rounded-lg">
+      {summaries.map((summary, index) => (
+        <div
+          key={index}
+          className={`flex justify-between items-center p-4 rounded-lg ${summary.color}`}
+        >
           <div className="flex gap-2">
             <Image src={summary.img} />
             <p>{summary.title}</p>

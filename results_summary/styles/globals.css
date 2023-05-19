@@ -11,3 +11,19 @@
 .grid-flow {
   @apply grid content-start gap-4;
 }
+
+.red {
+  @apply bg-red-200/[0.5] text-red-600;
+}
+
+.yellow {
+  @apply bg-yellow-200/[0.5] text-yellow-600;
+}
+
+.green {
+  @apply bg-green-200/[0.5] text-green-600;
+}
+
+.blue {
+  @apply bg-blue-200/[0.5] text-blue-600;
+}
