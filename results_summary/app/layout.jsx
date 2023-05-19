@@ -8,7 +8,7 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
-      <body>
+      <body className="font-hanken min-h-screen grid place-items-center">
         <main>{children}</main>
       </body>
     </html>

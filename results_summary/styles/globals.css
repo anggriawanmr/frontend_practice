@@ -1,5 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.button {
+  @apply text-gray-100 bg-blue-950 py-2 px-8 border-0  rounded-full font-bold cursor-pointer hover:bg-blue-600 focus-visible:bg-blue-600;
+}
+
+.grid-flow {
+  @apply grid content-start gap-4;
+}

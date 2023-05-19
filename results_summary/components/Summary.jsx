@@ -1,23 +1,25 @@
 import Image from 'next/image';
 
+import { summaries } from '@constants';
+
 const Summary = () => {
   return (
-    <div>
-      <h2>Summary</h2>
+    <div className="p-8 grid-flow text-center">
+      <h2 className="font-extrabold text-lg">Summary</h2>
+      {summaries.map((summary) => (
+        <div className="flex justify-between items-center p-4 rounded-lg">
+          <div className="flex gap-2">
+            <Image src={summary.img} />
+            <p>{summary.title}</p>
+          </div>
 
-      <div>
-        <Image
-          src="/assets/images/icon-reaction.svg"
-          alt="reaction icon"
-          width={30}
-          height={30}
-        ></Image>
-        <h3>Reaction</h3>
-      </div>
+          <p>
+            <span>{summary.score}</span> / 100
+          </p>
+        </div>
+      ))}
 
-      <p>
-        <span>80</span> / 100
-      </p>
+      <button className="button">Continue</button>
     </div>
   );
 };
