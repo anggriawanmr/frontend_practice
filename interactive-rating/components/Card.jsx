@@ -1,8 +1,15 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 
-import star from '@public/assets/images';
-
 const Card = () => {
+  const [selectedRating, setSelectedRating] = useState(null);
+
+  const handleRatingClick = (rating) => {
+    setSelectedRating(rating);
+  };
+
   return (
     <>
       <div className="star">
@@ -24,11 +31,17 @@ const Card = () => {
 
       <div className="submit-wrapper w-full">
         <div className="rating-wrapper">
-          <div className="star-rating">1</div>
-          <div className="star-rating">2</div>
-          <div className="star-rating">3</div>
-          <div className="star-rating">4</div>
-          <div className="star-rating">5</div>
+          {[1, 2, 3, 4, 5].map((rating) => (
+            <div
+              key={rating}
+              className={`star-rating ${
+                selectedRating === rating ? 'selectedRating' : ''
+              }`}
+              onClick={() => handleRatingClick(rating)}
+            >
+              {rating}
+            </div>
+          ))}
         </div>
 
         <button type="button" className="button">
