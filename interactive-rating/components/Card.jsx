@@ -1,13 +1,20 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 
 const Card = () => {
+  const router = useRouter();
+
   const [selectedRating, setSelectedRating] = useState(null);
 
   const handleRatingClick = (rating) => {
     setSelectedRating(rating);
+  };
+
+  const handleSubmit = () => {
+    router.push('/thankyou');
   };
 
   return (
@@ -23,7 +30,7 @@ const Card = () => {
       </div>
       <div className="content-wrapper">
         <h1 className="text-2xl font-bold">How did we do?</h1>
-        <p>
+        <p className="p-short mt-3">
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
@@ -44,7 +51,7 @@ const Card = () => {
           ))}
         </div>
 
-        <button type="button" className="button">
+        <button type="button" className="button" onClick={handleSubmit}>
           Submit
         </button>
       </div>

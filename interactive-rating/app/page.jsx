@@ -1,5 +1,4 @@
 import Card from '@components/Card';
-import Rating from '@components/Rating';
 
 const Home = () => {
   return (
