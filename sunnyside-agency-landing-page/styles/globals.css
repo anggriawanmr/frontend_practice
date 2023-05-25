@@ -39,13 +39,27 @@ nav {
 }
 
 .navLinks {
-  @apply flex gap-7 justify-center items-center;
+  @apply flex gap-10 justify-center items-center;
 }
 
 .navbar__menu {
-  @apply flex justify-between items-center gap-5;
+  @apply flex justify-between items-center gap-7 text-[color:var(--white)];
+}
+
+.navbar__menu-items {
+  @apply cursor-pointer hover:text-[color:var(--darkModerateCyan)];
 }
 
 .navbar__button {
-  @apply text-[color:var(--veryDarkDesaturatedBlue)] bg-[color:var(--white)] hover:bg-blue-800 font-semibold font-fraunces rounded-full text-sm px-5 py-2.5 mr-2 mb-2;
+  @apply text-[color:var(--veryDarkDesaturatedBlue)] bg-[color:var(--white)] hover:bg-[color:var(--darkModerateCyan)] hover:text-[color:var(--white)] font-semibold font-fraunces rounded-full text-xs px-5 py-2.5 mr-2 mb-2;
+}
+
+.header {
+  @apply overflow-hidden bg-cover h-screen  bg-center bg-no-repeat flex justify-around items-center flex-col font-fraunces;
+
+  letter-spacing: 10px;
+}
+
+.heading__header {
+  @apply uppercase z-20 text-[color:var(--white)]  text-4xl;
 }
