@@ -107,3 +107,41 @@ nav {
 .content__last {
   @apply absolute flex flex-col justify-end items-center top-60 left-0 p-40 text-center;
 }
+
+.flex-center {
+  @apply flex justify-center items-center flex-col;
+}
+
+.section__testimonials {
+  @apply p-32 gap-16;
+}
+
+.section__testimonials h2 {
+  @apply uppercase font-fraunces text-lg text-[color:var(--darkGreyishBlue)];
+
+  letter-spacing: 10px;
+}
+
+.section__testimonials-content {
+  @apply flex gap-10;
+}
+
+.section__testimonials-single {
+  @apply flex flex-col text-center items-center justify-between gap-8;
+}
+
+.testimonials-image {
+  @apply rounded-full w-16 h-16;
+}
+
+.section__testimonials-single p {
+  @apply font-barlow  flex-wrap;
+}
+
+.testimonials-job {
+  @apply text-[color:var(--grayishBlue)] text-xs;
+}
+
+.testimonials-comment {
+  @apply text-sm text-[color:var(--veryDarkGrayishBlue)] w-[85%] mb-9;
+}
