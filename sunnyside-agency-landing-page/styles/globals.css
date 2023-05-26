@@ -11,7 +11,7 @@
   --yellow: hsl(51, 100%, 49%);
   --darkDesaturatedCyan: hsl(167, 40%, 24%); /* (graphic design text) */
   --darkBlue: hsl(198, 62%, 26%); /* (photography text) */
-  --darkModerateCyan: hsl(168, 34%, 41%); /* (footer) */
+  --darkModerateCyan: hsl(168, 94%, 73%); /* (footer) */
 
   /* Neutral */
   --veryDarkDesaturatedBlue: hsl(212, 27%, 19%);
@@ -144,4 +144,32 @@ nav {
 
 .testimonials-comment {
   @apply text-sm text-[color:var(--veryDarkGrayishBlue)] w-[85%] mb-9;
+}
+
+.footer__image-list {
+  @apply grid grid-cols-4 place-self-center place-items-center;
+}
+
+.footer__image {
+  @apply w-full h-full;
+}
+
+.footer {
+  @apply bg-[color:var(--darkModerateCyan)] flex flex-col items-center justify-around gap-12 p-20;
+}
+
+.footer__logo {
+  @apply w-32;
+}
+
+.footer__links {
+  @apply text-xs flex gap-16 cursor-pointer text-[color:var(--darkDesaturatedCyan)];
+}
+
+.footer__social-images {
+  @apply flex gap-6 mt-8;
+}
+
+.footer__social-media {
+  @apply w-3;
 }
