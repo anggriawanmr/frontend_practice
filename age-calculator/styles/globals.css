@@ -29,3 +29,27 @@ html {
   font-size: 32px;
   font-family: Poppins;
 }
+
+.home {
+  @apply bg-[color:var(--lightGrey)] h-screen w-screen flex justify-center items-center;
+}
+
+.block-content {
+  @apply w-96 h-60 bg-[color:var(--offWhite)] rounded-br-[150px] p-5;
+}
+
+.date-input {
+  @apply flex gap-14;
+}
+
+.date-input label {
+  @apply text-[12px] uppercase text-[color:var(--smokedGrey)];
+}
+
+.date-input h2 {
+  @apply text-[color:var(--smokedGrey)];
+}
+
+.date-input__block {
+  @apply rounded-none border-2;
+}
